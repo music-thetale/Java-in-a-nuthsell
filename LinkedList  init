@@ -1,0 +1,25 @@
+import java.lang.Object.edu.colorado.nodes.Node;
+
+public class LinkedList {
+    
+        private Node head;
+        private int listCount;
+        
+    public LinkedList(){
+    
+    //class is istantiated through new Node object    
+    
+        head = new Node(null);
+        listCount = 0;
+    }
+    public void add(Object data){
+        Node crunchifyTemp = new Node(data);
+        Node crunchifyCurrent = head;
+    
+    while(crunchifyCurrent.getNext()!=null){
+        crunchifyCurrent = crunchifyCurrent.getNext();
+    }
+    crunchifyCurrent.setNext(crunchifyTemp);
+    listCount++;
+    }
+}
